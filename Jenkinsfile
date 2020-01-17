@@ -18,7 +18,7 @@ pipeline {
                     echo "New version computed: ${versionNew}, set in enviroment env.VERSION_NEW: ${env.VERSION_NEW}"
                 }
                 script {
-                    bat "dotnet msbuild /m /verbosity:minimal /t:Restore /t:Rebuild /p:Configuration=Release /p:PublishDir=./bin/PublishTemp/ src/${msBuildSolutionFile}"
+                    bat "dotnet msbuild /m /verbosity:minimal /t:Restore /t:Rebuild /p:Configuration=Release /p:PublishDir=./bin/PublishTemp/ ${msBuildSolutionFile}"
                 }
             }
         }       
