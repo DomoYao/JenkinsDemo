@@ -11,7 +11,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    def versionNew = 120.52.52.1
+                    def versionNew = "120.52.52.1"
                     env.VERSION_NEW = versionNew
 					echo "Start Build Branch: ${env.GIT_BRANCH} ${env.GIT_BRANCH.indexOf("hotfix")}"
 					
